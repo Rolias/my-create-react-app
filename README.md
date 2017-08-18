@@ -1,5 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
+This is a pretty simple learning demo that takes a github username and using the GitHub api retrieves the avatar name and company and displays it as a "card". It can display a list of cards. It has an about page to demo react-router. The submit for the form now uses redux to call an action and have the state maintained by the store. 
+
+np
+
 Below you will find some information on how to perform common tasks.<br>
 You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
 

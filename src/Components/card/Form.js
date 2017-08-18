@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import PropTypes from 'prop-types';
+import { Button, FormGroup, FormControl, Form as RForm } from 'react-bootstrap';
 
 class Form extends React.Component {
 	state = { userName: '' };
@@ -26,18 +27,20 @@ class Form extends React.Component {
 
 	render() {
 		return (
-			<form onSubmit={this.handleSubmit}>
-				<input
-					type="text"
-					className="form-control col-3"
-					value={this.state.userName}
-					onChange={this.updateUserName}
-					placeholder="Github username"
-				/>
-				<button type="submit" className="btn btn-primary">
-					Add card
-				</button>
-			</form>
+			<RForm inline onSubmit={this.handleSubmit}>
+				<FormGroup>
+					<FormControl
+						bsSize="large"
+						type="text"
+						value={this.state.userName}
+						onChange={this.updateUserName}
+						placeholder="Github username"
+					/>
+					<Button type="submit" bsStyle="success" bsSize="large">
+						Add card
+					</Button>
+				</FormGroup>
+			</RForm>
 		);
 	}
 }
